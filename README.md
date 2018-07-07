@@ -1,27 +1,56 @@
 # PokeAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+* Explicar conceptos:
+  - Programación web
+  - HTML5, CSS3, Javascript
+  - Angular
+  - Angular cli
+  - Visual Studio Code
 
-## Development server
+* Instalación
+  - Descargar e instalar NodeJS: https://nodejs.org/es/download/
+  - Instalar Angular CLI
+```
+    npm install -g @angular/cli
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Crear proyecto (iniciar con este punto para que la descarga de los módulos se de mientras se da el codelab)
 
-## Code scaffolding
+```
+    ng new PokeAngular
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Mostrar la estructura del proyecto
+  - Abrir proyecto con Visual Studio Code
+  - Mostrar estructura de carpetas
+  - Mostrar diagrama con la estructura
 
-## Build
+## Code time
+  - Mostrar el template inicial
+```
+    ng serve
+```
+  - Crear módulo y explicar estructura
+```
+    ng generate component pokedex
+```
+  - Crear Estructura HTML
+    - Navbar
+    - Cards (foto, número, nombre)
+    - Modal (foto, número, nombre, descripción)
+  - Explicar lo que es el módulo
+  - Crear un array con los datos
+  - Bind del array con la vista
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Si alcanza el tiempo
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  - Crear servicio (explicar lo que es y qué haremos con él)
+```
+    ng generate service pokeservice
+```
+  - Crear un JSON con el array
+  - Consumir el JSON desde el servicio
+  - Explicar porque se creo el servicio
+  - Explicar lo que es una API
+  - Mostrar la API que usaremos
+  - Modificar el servicio para consumir la API
