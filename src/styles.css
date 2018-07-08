@@ -14,3 +14,8 @@
     margin-bottom: 7.5px;
     cursor: pointer;
 }
+
+.rounded {
+    height: 200px;
+    width: 200px;
+}
