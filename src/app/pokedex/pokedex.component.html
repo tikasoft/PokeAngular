@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6 col-sm-2" *ngFor="let pokemon of pokemonList | async" data-toggle="modal" data-target="#pokemon-info">
-      <div class="card" (click)="setSelectedPokemon(pokemon)">
+    <div class="col-6 col-sm-2" *ngFor="let pokemon of pokemonList | async">
+      <div class="card" data-toggle="modal" data-target="#pokemon-info" (click)="setSelectedPokemon(pokemon)">
         <img class="card-img-top" [src]="pokemon.imgURL" [alt]="pokemon.name">
         <div class="card-body">
           <h5 class="card-title">#{{pokemon.number}} {{pokemon.name}}</h5>
