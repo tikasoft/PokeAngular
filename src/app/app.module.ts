@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
+import { PokedexService } from './pokedex.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,12 @@ import { PokedexComponent } from './pokedex/pokedex.component';
     PokedexComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PokedexService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
