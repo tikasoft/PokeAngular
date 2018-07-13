@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6 col-sm-2" *ngFor="let pokemon of pokemonList | async; let i = index">
+    <div class="col-6 col-sm-2" *ngFor="let pokemon of pokemonList | async">
       <div class="card" data-toggle="modal" data-target="#pokemon-info" (click)="setSelectedPokemon(pokemon)">
-        <img class="card-img-top" [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + (i + 1) + '.png'" [alt]="pokemon.nombre">
+        <img class="card-img-top" [src]="pokemon.imgURL" [alt]="pokemon.nombre">
         <div class="card-body">
-          <h5 class="card-title">#{{i + 1}} {{pokemon.nombre}}</h5>
+          <h5 class="card-title">#{{pokemon.numero}} {{pokemon.nombre}}</h5>
         </div>
       </div>
     </div>
@@ -14,12 +14,12 @@
 <div class="modal fade" id="pokemon-info" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-body row">
-        <div class="text-center">
-          <img [src]="selectedPokemon.imgURL" class="rounded" [alt]="selectedPokemon.nombre">
+      <div class="modal-body">
+        <div class="modal-img-container">
+          <img [src]="selectedPokemon.imgURL" class="modal-img" [alt]="selectedPokemon.nombre">
         </div>
         <div>
-          <h5 class="card-title">#{{selectedPokemon.number}} {{selectedPokemon.nombre}}</h5>
+          <h5 class="card-title">#{{selectedPokemon.numero}} {{selectedPokemon.nombre}}</h5>
           <p>
             {{selectedPokemon.descripcion}}
           </p>

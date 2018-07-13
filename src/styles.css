@@ -15,7 +15,12 @@
     cursor: pointer;
 }
 
-.rounded {
-    height: 200px;
-    width: 200px;
+.modal-img-container {
+    float: left;
+    margin: 10px;
+}
+
+.modal-img {
+    height: 150px;
+    width: 150px;
 }
