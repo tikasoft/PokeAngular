@@ -7,17 +7,9 @@ import { PokedexComponent } from './pokedex/pokedex.component';
 import { PokedexService } from './pokedex.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PokedexComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
-  providers: [
-    PokedexService
-  ],
+  declarations: [AppComponent, PokedexComponent],
+  imports: [BrowserModule, HttpClientModule],
+  providers: [PokedexService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

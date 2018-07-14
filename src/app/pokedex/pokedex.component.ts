@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Observable } from '../../../node_modules/rxjs';
+import { Observable } from 'rxjs';
+
 import { PokedexService } from 'src/app/pokedex.service';
 
 @Component({
@@ -8,21 +9,21 @@ import { PokedexService } from 'src/app/pokedex.service';
   styleUrls: ['./pokedex.component.css']
 })
 export class PokedexComponent {
-  pokemonList: Observable<Array<any>>;
+  listaDePokemon: Observable<Array<any>>;
 
-  selectedPokemon: any;
+  pokemonSeleccionado: any;
 
   constructor(private pokedexService: PokedexService) {
-    this.pokemonList = this.pokedexService.getPokemons();
+    this.listaDePokemon = this.pokedexService.getListaDePokemon();
 
-    this.selectedPokemon = {
-      number: 0,
-      name: '',
+    this.pokemonSeleccionado = {
+      numero: 0,
+      nombre: '',
       imgURL: ''
     };
   }
 
-  setSelectedPokemon(pokemon): void {
-    this.selectedPokemon = pokemon;
+  setPokemonSeleccionado(pokemon: any): void {
+    this.pokemonSeleccionado = pokemon;
   }
 }
