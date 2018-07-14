@@ -6,72 +6,76 @@ import { Component } from '@angular/core';
   styleUrls: ['./pokedex.component.css']
 })
 export class PokedexComponent {
-  pokemonList: Array<any>;
+  listaDePokemon: Array<any>;
 
-  selectedPokemon: any;
+  pokemonSeleccionado: any;
 
   constructor() {
-    this.pokemonList = [
+    this.listaDePokemon = [
       {
-        number: 1,
-        name: 'Bulbasaur',
+        numero: 1,
+        nombre: 'Bulbasaur',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
       },
       {
-        number: 2,
-        name: 'Ivysaur',
+        numero: 2,
+        nombre: 'Ivysaur',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png'
       },
       {
-        number: 3,
-        name: 'Venusaur',
+        numero: 3,
+        nombre: 'Venusaur',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png'
       },
       {
-        number: 4,
-        name: 'Charmander',
+        numero: 4,
+        nombre: 'Charmander',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png'
       },
       {
-        number: 5,
-        name: 'Charmeleon',
+        numero: 5,
+        nombre: 'Charmeleon',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png'
       },
       {
-        number: 6,
-        name: 'Charizard',
+        numero: 6,
+        nombre: 'Charizard',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png'
       },
       {
-        number: 7,
-        name: 'Squirtle',
+        numero: 7,
+        nombre: 'Squirtle',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png'
       },
       {
-        number: 8,
-        name: 'Wartortle',
+        numero: 8,
+        nombre: 'Wartortle',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png'
       },
       {
-        number: 9,
-        name: 'Blastoise',
+        numero: 9,
+        nombre: 'Blastoise',
         imgURL:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png'
       }
     ];
 
-    this.selectedPokemon = this.pokemonList[0];
+    this.pokemonSeleccionado = {
+      numero: 0,
+      nombre: '',
+      imgURL: ''
+    };
   }
 
-  setSelectedPokemon(pokemon): void {
-    this.selectedPokemon = pokemon;
+  setPokemonSeleccionado(pokemon: any): void {
+    this.pokemonSeleccionado = pokemon;
   }
 }

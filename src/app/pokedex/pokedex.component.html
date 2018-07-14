@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6 col-sm-2" *ngFor="let pokemon of pokemonList">
-      <div class="card" data-toggle="modal" data-target="#pokemon-info" (click)="setSelectedPokemon(pokemon)">
-        <img class="card-img-top" [src]="pokemon.imgURL" [alt]="pokemon.name">
+    <div class="col-6 col-sm-2" *ngFor="let pokemon of listaDePokemon">
+      <div class="card" data-toggle="modal" data-target="#pokemon-info" (click)="setPokemonSeleccionado(pokemon)">
+        <img class="card-img-top" [src]="pokemon.imgURL" [alt]="pokemon.nombre">
         <div class="card-body">
-          <h5 class="card-title">#{{pokemon.number}} {{pokemon.name}}</h5>
+          <h5 class="card-title">#{{pokemon.numero}} {{pokemon.nombre}}</h5>
         </div>
       </div>
     </div>
@@ -12,14 +12,14 @@
 </div>
 
 <div class="modal fade" id="pokemon-info" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-body row">
+      <div class="modal-body">
         <div class="text-center">
-          <img [src]="selectedPokemon.imgURL" class="rounded" [alt]="selectedPokemon.name">
+          <img [src]="pokemonSeleccionado.imgURL" [alt]="pokemonSeleccionado.nombre">
         </div>
         <div>
-          <h5 class="card-title">#{{selectedPokemon.number}} {{selectedPokemon.name}}</h5>
+          <h5 class="card-title">#{{pokemonSeleccionado.numero}} {{pokemonSeleccionado.nombre}}</h5>
           <p>
             ...
           </p>
