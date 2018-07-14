@@ -56,18 +56,25 @@
           <div class="form-check">
             <input id="opcion-1" class="form-check-input" type="radio" name="respuesta" value="1" (change)="onCambioDeRespuesta(1)" [(ngModel)]="checked">
             <label class="form-check-label" for="opcion-1">
-              Es un Frapokemonork
+              Es una librería para el desarrollo de aplicaciones web.
             </label>
           </div>
           <div class="form-check">
             <input id="opcion-2" class="form-check-input" type="radio" name="respuesta" value="2" (change)="onCambioDeRespuesta(2)" [(ngModel)]="checked">
             <label class="form-check-label" for="opcion-2">
-              Es una librería
+              Es un framework para el desarrollo de aplicaciones web modernas de tipo SPA.
+            </label>
+          </div>
+          <div class="form-check">
+            <input id="opcion-3" class="form-check-input" type="radio" name="respuesta" value="3" (change)="onCambioDeRespuesta(3)" [(ngModel)]="checked">
+            <label class="form-check-label" for="opcion-3">
+              Es una herramienta para el desarrollo de aplicaciones nativas para Android.
             </label>
           </div>
           <div class="form-group">
             <label for="user-name">Nombre:</label>
-            <input type="text" class="form-control" id="user-name" placeholder="Ingresa tu nombre" name="user-name" [(ngModel)]="nombre" required>
+            <input type="text" class="form-control" id="user-name" placeholder="Ingresa tu nombre" name="user-name" [(ngModel)]="nombre"
+              required>
           </div>
           <label class="text-success" *ngIf="respuestaFueDada && laRespuestaDadaFueCorrecta">Respuesta Correcta</label>
           <label class="text-danger" *ngIf="respuestaFueDada && !laRespuestaDadaFueCorrecta">Respuesta Incorrecta</label>
