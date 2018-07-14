@@ -13,7 +13,7 @@ export class PokedexService {
   }
 
   guardarRespuesta(nombre: string): void {
-    this.http.get<any>('http://ipinfo.io').subscribe(data => {
+    this.http.get<any>('https://ipinfo.io').subscribe(data => {
       console.log(data);
       const newRespuesta: PokeRespuestas = {
         nombre: nombre,
